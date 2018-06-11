@@ -1,6 +1,6 @@
 # GDL Docker image
 
-This image is based on the official [python image from Docker Hub](https://hub.docker.com/_/python/), tag 3.6.5-stretch, i.e.:
+This image is based on the official [python image from Docker Hub](https://hub.docker.com/_/python/), tag 3.6.5-slim-stretch, i.e.:
 
 - python: 3.6.5
 - OS : debian 9 (stretch)
@@ -10,14 +10,14 @@ To build the image:
 1. clone this repo and build the image
 
 ```bash
-docker build -t gnudatalanguage:py_3.6.5-jessie .
+docker build -t gnudatalanguage:py_3.6.5-slim-stretch .
 ```
 
 2. define an alis on your machine (credit to [koalalorenzo/docker-aliases](https://github.com/koalalorenzo/docker-aliases)).
 This binds the current working directory as `/directory` in the container.
 
 ```bash
-alias gdl="docker run -it --rm -v $(pwd):/directory -w /directory gnudatalanguage:py_3.6.5-jessie gdl"
+alias gdl="docker run -it --rm -v $(pwd):/directory -w /directory gnudatalanguage:py_3.6.5-slim-stretch gdl"
 ```
 
 3. enjoy a containerised gdl:
